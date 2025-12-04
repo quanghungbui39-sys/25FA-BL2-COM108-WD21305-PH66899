@@ -59,6 +59,18 @@ void demoMang2chieu()
 		printf("\n");
 	}
 }
+void demoString()
+{
+	// string
+	char name[50] = "QuangHung2004";
+	while (getchar() != '\n');
+	printf("Nhap ten cua ban: ");
+	// su dung ham fgets
+	fgets(name, sizeof(name), stdin);
+	//xuat du lieu
+	printf("%s", name);
+	printf("\n");
+}
 void lapChucNang(int chonChucNang)
 {
 	int tiepTuc = 1;
@@ -74,6 +86,9 @@ void lapChucNang(int chonChucNang)
 			break;
 		case 3:
 			demoMang2chieu();
+			break;
+		case 4:
+			demoString();
 			break;
 		default:
 			printf("Chon sai. Chuc nang hop le [0-3]");
@@ -100,9 +115,11 @@ int main()
 		printf("\n");
 		printf("3. Mang 2 chieu");
 		printf("\n");
+		printf("4. Demo chuoi ki tu");
+		printf("\n");
 		printf("0. Thoat");
 		printf("\n");
-		printf("Hay chon chuc nang [0-3]: ");
+		printf("Hay chon chuc nang [0-4]: ");
 		scanf_s("%d", &chonChucNang);
 		lapChucNang(chonChucNang);
 	} while (chonChucNang != 0);
