@@ -2,6 +2,7 @@
 // Chuong trinh phan mem Bat dau thuc thi & Ket thuc o day.
 
 #include <stdio.h>
+
 void kiemTraSoNguyen()
 {
 	printf("Kiem Tra So Nguyen");
@@ -62,13 +63,32 @@ void demoMang2chieu()
 void demoString()
 {
 	// string
-	char name[50] = "QuangHung2004";
+		char mangKyTu[10] = 'ANH';
+	//scanf("%c"
+	//gets(mangKyTu);
 	while (getchar() != '\n');
-	printf("Nhap ten cua ban: ");
-	// su dung ham fgets
-	fgets(name, sizeof(name), stdin);
-	//xuat du lieu
-	printf("%s", name);
+	printf("Nhap du lieu String: ");
+	fgets(mangKyTu, sizeof(mangKyTu), stdin);
+	//loop + printf("%c\n"
+	printf("%s", mangKyTu);
+	printf("\n");
+	// put(mangKyTu);
+	printf("%d", strlen(mangKyTu) - 1);
+	printf("\n");
+
+	printf("%d", strcmp("A", "B"));
+	printf("\n");
+	char str[5] = "ABC";
+	printf("%s", strrev(str));
+	printf("\n");
+
+	printf("%s", strlwr(str));
+	printf("\n");
+
+	printf("%s", strupr(str));
+	printf("\n");
+
+	printf(strstr("ABC", "D"));
 	printf("\n");
 }
 void lapChucNang(int chonChucNang)
